@@ -1,21 +1,27 @@
-#Currency Converter App 💱
+💱 Currency Converter App
 
-A simple Flutter app for converting currencies using real-time API rates.
+A simple and clean Flutter application to convert currencies in real-time using API rates.
 
-Features
+🚀 Features
 
-Convert amounts between any currencies.
+Enter an amount and convert between currencies.
 
-Select base and target currencies via dropdown.
+Select base currency and target currency via dropdown.
 
-Enter amount in a TextField and tap a button to see the converted result.
+Display the converted amount instantly.
 
-Technologies Used
+Reactive state management using Cubit/Bloc.
 
-Flutter – UI development.
+Clean and modular project structure.
 
-Bloc/Cubit – State management.
+🛠️ Tech Stack
 
-Dio + Retrofit – API requests.
+Flutter – UI Framework
 
-Json Serializable – JSON to Dart model conversion.
+Dart – Programming Language
+
+Dio + Retrofit – API requests
+
+Json Serializable – JSON to Dart model conversion
+
+Bloc/Cubit – State Management
