@@ -1,4 +1,4 @@
-Currency Converter App 💱
+#Currency Converter App 💱
 
 A simple Flutter app for converting currencies using real-time API rates.
 
