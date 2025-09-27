@@ -7,7 +7,7 @@ class CurrencyRepo {
 
   CurrencyRepo(this.webServices);
   Future<CurrencyModel> fetchRates({
-     String apiKey=Apistrings.apiKey,
+   
     String baseCurrency = "USD",
     String currencies = "EUR",
   }) async {

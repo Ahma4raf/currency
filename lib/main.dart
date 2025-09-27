@@ -1,6 +1,12 @@
+import 'package:currency/busniess_logic/cubit/currency_cubit.dart';
+import 'package:currency/data/repo/currency_repo.dart';
+import 'package:currency/injection.dart';
+import 'package:currency/presentation/currencyScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
+  injection();
   runApp(const MainApp());
 }
 
@@ -9,11 +15,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      home: BlocProvider(
+        create: (context) => CurrencyCubit(getIt<CurrencyRepo>()),
+        child: Currencyscreen(),
       ),
     );
   }
