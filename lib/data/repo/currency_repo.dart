@@ -6,11 +6,7 @@ class CurrencyRepo {
   final Webservices webServices;
 
   CurrencyRepo(this.webServices);
-  Future<CurrencyModel> fetchRates({
-   
-    String baseCurrency = "USD",
-    String currencies = "EUR",
-  }) async {
-    return await webServices.getLatestRates( baseCurrency, currencies);
+  Future<CurrencyModel> fetchRates({String baseCurrency = "USD"}) async {
+    return await webServices.getLatestRates(baseCurrency);
   }
 }

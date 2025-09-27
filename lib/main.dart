@@ -17,8 +17,9 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: BlocProvider(
-        create: (context) => CurrencyCubit(getIt<CurrencyRepo>()),
-        child: Currencyscreen(),
+        create: (context) =>
+            CurrencyCubit(getIt<CurrencyRepo>())..fetchCurrencies(),
+        child: CurrencyConverterScreen(),
       ),
     );
   }

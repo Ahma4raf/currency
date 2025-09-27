@@ -20,17 +20,10 @@ class _Webservices implements Webservices {
   String? baseUrl;
 
 
-
   @override
-  Future<CurrencyModel> getLatestRates(
-    String baseCurrency,
-    String currencies,
-  ) async {
+  Future<CurrencyModel> getLatestRates(String baseCurrency) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{
-      r'base_currency': baseCurrency,
-      r'currencies': currencies,
-    };
+    final queryParameters = <String, dynamic>{r'base_currency': baseCurrency};
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<CurrencyModel>(
@@ -48,7 +41,7 @@ class _Webservices implements Webservices {
     try {
       _value = CurrencyModel.fromJson(_result.data!);
     } on Object catch (e, s) {
-      
+    
     }
     return _value;
   }
